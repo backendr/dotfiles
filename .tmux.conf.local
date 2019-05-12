@@ -1,6 +1,7 @@
 # Add your local tmux config here
 
 ## set fish to the default shell
+#set-option -g default-command /usr/local/bin/fish
 set-option -g default-shell /usr/local/bin/fish
 
 ## tmux powerline
