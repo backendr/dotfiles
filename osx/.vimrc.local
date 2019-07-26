@@ -1,0 +1,54 @@
+set nocursorline " don't highlight current line
+
+" keyboard shortcuts
+inoremap jj <ESC>
+
+" highlight search
+"set hlsearch
+"nmap <leader>hl :let @/ = ""<CR>
+
+" set shell to bash, as we are working with fish
+set shell=/bin/bash
+
+" gui settings
+if (&t_Co == 256 || has('gui_running'))
+  if ($TERM_PROGRAM == 'iTerm.app')
+    colorscheme solarized
+  else
+    colorscheme desert
+  endif
+endif
+
+" Disambiguate ,a & ,t from the Align plugin, making them fast again.
+"
+" This section is here to prevent AlignMaps from adding a bunch of mappings
+" that interfere with the very-common ,a and ,t mappings. This will get run
+" at every startup to remove the AlignMaps for the *next* vim startup.
+"
+" If you do want the AlignMaps mappings, remove this section, remove
+" ~/.vim/bundle/Align, and re-run rake in maximum-awesome.
+function! s:RemoveConflictingAlignMaps()
+  if exists("g:loaded_AlignMapsPlugin")
+    AlignMapsClean
+  endif
+endfunction
+command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
+silent! autocmd VimEnter * RemoveConflictingAlignMaps
+
+" enable gitgutter
+let g:gitgutter_enabled=1
+set updatetime=750
+
+" copy sytemwide with yy
+set clipboard=unnamed
+
+" relative line numbers
+set relativenumber
+
+" mappings for incsearch.vim plugin
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+syntax on
+colorscheme gruvbox

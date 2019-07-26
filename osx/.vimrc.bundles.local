@@ -1,0 +1,4 @@
+Plugin 'vim-airline/vim-airline'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'zivyangll/git-blame.vim'
