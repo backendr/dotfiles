@@ -34,10 +34,10 @@ git clone https://github.com/square/maximum-awesome.git
 cd maximum-awesome
 rake
 
-# clone tmux-powerline
-echo "Installing tmux-powerline"
+# clone gruvbox
+echo "Installing gruvbox"
 cd ~/projects
-git clone https://github.com/erikw/tmux-powerline.git
+git clone https://github.com/morhetz/gruvbox-contrib.git
 
 # install powerline fonts
 echo "Installing powerline fonts"
@@ -45,6 +45,10 @@ cd ~/projects
 git clone https://github.com/powerline/fonts.git
 cd fonts
 ./install.sh
+
+# install aws-tools
+cd ~/projects
+git clone https://github.com/backendr/aws-tools.git
 
 # create .bash_profile and .bashrc
 cd ~
@@ -79,3 +83,4 @@ source /usr/local/miniconda2/etc/fish/conf.d/conda.fish
 # [] convert to makefile with sections
 
 echo "Done. You can now configure any dot files that you need!"
+echo "Dont forget to set iTerm color scheme to gruvbox, import firefox bookmarks"
