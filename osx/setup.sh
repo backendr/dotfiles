@@ -18,7 +18,7 @@ brew tap homebrew/cask-versions
 
 # install brew casks
 echo "Installing brew casks"
-brew cask install 1password6 atom bettertouchtool caffeine docker-edge dropbox firefox istat-menus5 keepassx mailspring miniconda2 pycharm-ce slack spotify typora
+brew cask install 1password6 atom bettertouchtool caffeine docker-edge drawio dropbox firefox github istat-menus5 keepassx mailspring miniconda2 nordvpn pycharm slack spotify typora
 
 # Make firefox default browser
 /Applications/Firefox.app/Contents/MacOS/firefox -setDefaultBrowser &
